@@ -373,7 +373,7 @@
         <a class="btn btn-primary" href="#projects">View Projects</a>
         <a class="btn btn-outline" href="https://www.linkedin.com/in/robinlange-gsu/" target="_blank">LinkedIn</a>
         <a class="btn btn-outline" href="Resume_Lange.pdf" target="_blank">Resume</a>
-        <a class="btn btn-outline" href="mailto:robin.lange.eng@proton.me">Email</a>
+        <a class="btn btn-outline" href="/cdn-cgi/l/email-protection#abd9c4c9c2c585c7cac5ccce85cec5ccebdbd9c4dfc4c585c6ce">Email</a>
       </div>
     </div>
     <div class="hero-photo">
@@ -387,7 +387,7 @@
     <div class="about-grid">
       <div class="about-text">
         <p>Mechanical Engineering student from <strong>Bavaria, Germany</strong>, studying at Georgia Southern University with a Vehicle Design and Testing emphasis. President's List every semester since enrollment. Allen E. Paulson Scholar. Honors College.</p>
-        <p>I research at the <strong>Intelligent Vehicle Laboratory</strong>, building ROS2-based perception and control pipelines for autonomous platforms using LiDAR, 4D-Radar, and RGB-D cameras. Published at SAE World Congress and presented at multiple regional and honors conferences.</p>
+        <p>I research at the <strong>Intelligent Vehicle Laboratory</strong>, building perception and navigation pipelines for autonomous platforms using LiDAR, 4D-Radar, RGB-D cameras, and deep learning. Current work focuses on <strong>Visual SLAM</strong>, <strong>PyTorch-based model training</strong>, and sim-to-real transfer. Two SAE Technical Papers published, one journal paper submitted.</p>
         <p>Interned at <strong>Fraunhofer IVI</strong>, <strong>CARISSMA C-ISAFE</strong>, <strong>Airbus Defence and Space</strong>, and <strong>Airbus Helicopters</strong>.</p>
         <p>Languages: <strong>German</strong> (native), <strong>English</strong> (fluent), <strong>French</strong> (intermediate).</p>
       </div>
@@ -428,7 +428,7 @@
         <p>Open to research collaboration, internship opportunities, and technical questions.</p>
       </div>
       <div class="contact-links">
-        <a class="btn btn-primary" href="mailto:robin.lange.eng@proton.me">robin.lange.eng@proton.me</a>
+        <a class="btn btn-primary" href="/cdn-cgi/l/email-protection#c8baa7aaa1a6e6a4a9a6afade6ada6af88b8baa7bca7a6e6a5ad"><span class="__cf_email__" data-cfemail="fe8c919c9790d0929f90999bd09b9099be8e8c918a9190d0939b">[email&#160;protected]</span></a>
         <a class="btn btn-outline" href="https://www.linkedin.com/in/robinlange-gsu/" target="_blank">LinkedIn</a>
         <a class="btn btn-outline" href="Resume_Lange.pdf" target="_blank">Resume</a>
       </div>
@@ -438,17 +438,21 @@
 </main>
 
 <footer>
-  <p>© 2025 Robin Lange &nbsp;·&nbsp; Statesboro, GA &nbsp;·&nbsp; German Citizen</p>
+  <p>© 2026 Robin Lange &nbsp;·&nbsp; Statesboro, GA &nbsp;·&nbsp; German Citizen</p>
   <p>GitHub Pages</p>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const SKILLS = [
-  "ROS2","Python","C++","MATLAB",
-  "LiDAR (Ouster)","4D-Radar (Altos)",
-  "Intel RealSense","NVIDIA Jetson",
-  "LabVIEW","SolidWorks (CSWA)",
-  "AutoCAD","CFD","Git",
+  "Python","PyTorch","ONNX",
+  "Deep Learning (LSTM · YOLO)","Computer Vision",
+  "ROS2","Visual SLAM (cuVSLAM)","Nav2",
+  "Gazebo Ignition","Behavior Trees",
+  "Sensor Fusion","Motion Planning",
+  "C++","MATLAB","Linux","Docker","Git",
+  "LiDAR (Ouster OS0 128-ch)","4D-Radar (ESR 2.5)",
+  "Intel RealSense D455","NVIDIA Jetson Orin Nano",
+  "SolidWorks (CSWA)","LabVIEW",
 ];
 
 const PRESS = [
@@ -478,10 +482,11 @@ const EXPERIENCE = [
     org:"Intelligent Vehicle Laboratory · Georgia Southern University",
     date:"Oct 2023 — Present",
     bullets:[
-      "Developed ROS2-based perception and control pipelines for diverse robotic platforms using LiDAR and camera data.",
-      "Processed sensor data streams using MATLAB and Python to optimize object detection and state estimation algorithms.",
-      "Collaborated on large-scale research initiatives led by graduate students while managing independent engineering projects.",
-      "Authored weekly progress reports for the faculty supervisor to document project milestones.",
+      "Built a cuVSLAM Visual SLAM pipeline on NVIDIA Jetson Orin Nano with Intel RealSense D455 using Isaac ROS / ROS2 Humble, validated against a Marvelmind dual-beacon indoor positioning ground truth. Achieved MAE 8.8 cm, RMSE 14.5 cm, matching NVIDIA's published KITTI benchmark accuracy.",
+      "Co-authored a data-driven sim-to-real calibration paper: PyTorch LSTM trained on 87K+ real-vehicle encoder samples, exported to ONNX, and deployed in a Gazebo ROS2 control plugin. Reduced simulation RMSE 36%, MAE 29% vs. uncalibrated baseline. Published SAE Technical Paper 2026-01-0058.",
+      "Co-authored a warehouse robot platooning framework (leader-follower AMRs, PRM path planning, envelope-based collision prevention). 20-trial simulation cut static-obstacle collisions 88% (49 → 6). Submitted to Control Engineering Practice.",
+      "Integrated a Delphi/Aptiv ESR 2.5 radar over CAN bus on the Jetson Orin Nano (Ubuntu 22.04, ROS2 Humble), extending the autonomous vehicle sensor suite to multi-modal radar + LiDAR + RGB-D perception.",
+      "Built a rule-based LiDAR lane-keeping perception module using Behavior Trees and ROS2, processing Ouster OS0 128-channel point clouds. Tracked oncoming vehicle lane behavior across 9 real-world scenarios with zero false-positive lane-crossing predictions. Published SAE Technical Paper 2025-01-8025.",
     ],
   },
   {
@@ -489,9 +494,9 @@ const EXPERIENCE = [
     org:"CARISSMA Institute of Safety in Future Mobility (C-ISAFE)",
     date:"Jul 2025 — Aug 2025 · Ingolstadt, Germany",
     bullets:[
-      "Designed a verifiable soft target for automotive crash testing to evaluate multimodal ADAS sensors.",
-      "Analyzed LiDAR return signal intensity to simulate truck underride collisions for the KICSAFe project.",
-      "Supported research to predict unavoidable accidents and trigger safety systems before collisions occur.",
+      "Trained and evaluated a custom YOLOv6l model in PyTorch for truck-rear detection on BDD100K, benchmarked against a TFLite YOLOv5 baseline. Quantified per-class detection gaps to support ADAS sensor integration decisions.",
+      "Validated Radar, LiDAR, and Camera ADAS sensor performance across 4 simulated crash scenarios (MIAMy and KICSSAFe projects) using physical LKW soft-crash targets. Produced a sensor deficiency dataset supporting a scientific publication on failure modes.",
+      "Built a 3D LiDAR ground-truth evaluation framework and analyzed raw radar return signals to predict system failure conditions. Results informed sensor-integration decisions for safety-critical pre-crash systems.",
     ],
   },
   {
@@ -499,9 +504,8 @@ const EXPERIENCE = [
     org:"Fraunhofer Institute for Transportation and Infrastructure Systems IVI",
     date:"Jun 2024 — Aug 2024 · Ingolstadt, Germany",
     bullets:[
-      "Programmed a hierarchical UAV control system using Behavior Trees in Python.",
-      "Executed simulation-based verification tests to reduce decision-making latency.",
-      "Improved system responsiveness over traditional State Machine architectures.",
+      "Engineered a novel autonomous UAV control system using Behavior Trees within ROS2, benchmarked against a legacy State Machine architecture on mission-critical flight sequences. Selected BT approach for production based on a 20% latency reduction and superior modularity.",
+      "Empirically evaluated 3 control algorithm variants for resource efficiency on embedded UAV hardware. Documented performance bounds and failure modes for production handoff; received an outstanding ('sehr gut') evaluation.",
     ],
   },
   {
@@ -535,23 +539,42 @@ const EXPERIENCE = [
 
 const PROJECTS = [
   {
+    title:"Indoor UAV Navigation — V-SLAM & Behavior Trees",
+    desc:"cuVSLAM-based Visual SLAM pipeline running on NVIDIA Jetson Orin Nano with Intel RealSense D455 using Isaac ROS / ROS2 Humble. Validated against Marvelmind dual-beacon ground truth: MAE 8.8 cm, RMSE 14.5 cm, matching NVIDIA's KITTI benchmark. Presented at SRHC 2026.",
+    tags:["ROS2","cuVSLAM","NVIDIA Jetson","Python","Behavior Trees"],
+    category:"navigation",icon:"🛸",github:"",demo:"",demoLabel:"Paper",
+  },
+  {
+    title:"Data-Driven Sim-to-Real Calibration",
+    desc:"PyTorch LSTM trained on 87K+ real-vehicle encoder samples to predict actuator response. Exported to ONNX and deployed inside a Gazebo ROS2 control plugin. Reduced simulation RMSE 36% and MAE 29% vs. uncalibrated baseline. Published SAE Technical Paper 2026-01-0058.",
+    tags:["PyTorch","ONNX","Gazebo","ROS2","LSTM"],
+    category:"navigation",icon:"🧠",github:"",
+    demo:"https://doi.org/10.4271/2026-01-0058",demoLabel:"SAE Paper",
+  },
+  {
+    title:"Warehouse Robot Platooning Framework",
+    desc:"Leader-follower AMR platooning system with PRM path planning and an envelope-based collision-prevention algorithm simulated in MATLAB. 20 trials cut static-obstacle collisions 88% (49 → 6) vs. no-envelope baseline. Submitted to Control Engineering Practice.",
+    tags:["MATLAB","Motion Planning","Multi-Robot","Simulation"],
+    category:"navigation",icon:"🏭",github:"",demo:"",demoLabel:"Paper",
+  },
+  {
     title:"Rule-Based LiDAR Lane-Keeping Assistance System",
-    desc:"ROS2 pipeline for lane detection and lateral control using 3D LiDAR return signal intensity. Presented at WCX SAE World Congress 2025. SAE Technical Paper 2025-01-8025.",
+    desc:"ROS2 pipeline for lane detection and oncoming vehicle behavior quantification using Ouster OS0 128-channel LiDAR. Tracked DTLM across 9 real-world scenarios with zero false-positive lane-crossing predictions. Published SAE Technical Paper 2025-01-8025.",
     tags:["ROS2","LiDAR","Python","Behavior Trees"],
     category:"perception",icon:"🛣️",github:"",
-    demo:"https://saemobilus.sae.org/papers/development-a-rule-based-lidar-lane-keeping-assistance-system-autonomous-vehicles-applications-2025-01-8025",
+    demo:"https://doi.org/10.4271/2025-01-8025",
     demoLabel:"SAE Paper",
   },
   {
-    title:"3D LiDAR & Camera Object Detection Fusion",
-    desc:"Evaluated and fused 3D LiDAR and camera-based object detection systems using AI for autonomous platforms. Allen E. Paulson CEC Research Symposium 2024.",
-    tags:["Python","LiDAR","Camera","Sensor Fusion"],
-    category:"perception",icon:"👁️",github:"",demo:"",demoLabel:"Paper",
+    title:"YOLO Truck-Rear Detection — PyTorch vs. TFLite",
+    desc:"Trained and evaluated a custom YOLOv6l model in PyTorch for truck-rear detection on BDD100K, benchmarked against a TFLite YOLOv5 baseline. Quantified per-class detection performance gaps to support ADAS sensor integration decisions at CARISSMA C-ISAFE.",
+    tags:["PyTorch","YOLO","Computer Vision","BDD100K"],
+    category:"perception",icon:"🚛",github:"",demo:"",demoLabel:"Paper",
   },
   {
     title:"UAV Behavior Tree Control System",
-    desc:"Hierarchical UAV control using Behavior Trees in Python at Fraunhofer IVI. Reduced decision-making latency vs. State Machine architectures via simulation-based verification.",
-    tags:["Python","UAV","Behavior Trees","Simulation"],
+    desc:"Autonomous UAV decision-making using Behavior Trees in ROS2, benchmarked against a legacy State Machine architecture on mission-critical flight sequences at Fraunhofer IVI. Selected for production based on a 20% latency reduction and superior modularity.",
+    tags:["Python","ROS2","UAV","Behavior Trees"],
     category:"navigation",icon:"🚁",github:"",demo:"",demoLabel:"Demo",
   },
   {
@@ -564,9 +587,9 @@ const PROJECTS = [
   },
   {
     title:"ADAS Soft Target for Crash Testing",
-    desc:"Designed a verifiable soft target to evaluate multimodal ADAS sensors in truck underride collision scenarios using LiDAR return signal analysis at CARISSMA C-ISAFE.",
+    desc:"Designed a verifiable soft target to evaluate multimodal ADAS sensors in truck underride collision scenarios. Built a 3D LiDAR ground-truth evaluation framework and analyzed radar return signals to predict system failure conditions at CARISSMA C-ISAFE.",
     tags:["LiDAR","ADAS","4D-Radar","Safety Testing"],
-    category:"perception",icon:"🚛",github:"",demo:"",demoLabel:"Paper",
+    category:"perception",icon:"📡",github:"",demo:"",demoLabel:"Paper",
   },
   {
     title:"Driverless Roadster",
@@ -580,15 +603,25 @@ const PROJECTS = [
     tags:["SolidWorks","CAD","Mechanisms","Assembly"],
     category:"engineering",icon:"🦾",github:"",demo:"",demoLabel:"Demo",
   },
-  {
-    title:"Go-Kart — SolidWorks Assembly",
-    desc:"Full go-kart 3D model with detailed part drawings, exploded views, and motion animation in SolidWorks. Group project for ENGR 2112.",
-    tags:["SolidWorks","CAD","Assembly","Design"],
-    category:"engineering",icon:"🏎️",github:"",demo:"",demoLabel:"Demo",
-  },
 ];
 
 const PUBLICATIONS = [
+  {
+    title:"Data-Driven Calibration of Vehicle Simulations for Accurate Control Response in Development and Testing",
+    venue:"SAE Technical Paper · WCX World Congress · April 2026",
+    meta:"Co-Author · doi:10.4271/2026-01-0058",
+    doi:"https://doi.org/10.4271/2026-01-0058",pdf:"",
+  },
+  {
+    title:"Warehouse Platooning Framework using a Sensor-Rich Leader and Minimal Perception Follower",
+    venue:"Control Engineering Practice · Submitted 2026",
+    meta:"Co-Author · Georgia Southern University",doi:"",pdf:"",
+  },
+  {
+    title:"Intelligent Indoor UAV Navigation with V-SLAM and Behavior Trees for Industry 5.0 Applications",
+    venue:"Southern Regional Honors Council Conference · March 2026",
+    meta:"Presenter · Montgomery, AL",doi:"",pdf:"",
+  },
   {
     title:"Development of a Rule-Based Lidar Lane-Keeping Assistance System for Autonomous Vehicle Applications",
     venue:"SAE Technical Paper · WCX World Congress · April 2025",
@@ -603,12 +636,12 @@ const PUBLICATIONS = [
   {
     title:"Drone Guiding through Equivalent Hand Movement Transversion",
     venue:"Allen E. Paulson CEC Research Symposium · April 2025",
-    meta:"2nd Place — Georgia Power Innovation Undergraduate Award",doi:"",pdf:"",
+    meta:"Presenter · 2nd Place — Georgia Power Innovation Undergraduate Award",doi:"",pdf:"",
   },
   {
     title:"3D-Space Hand Trajectory Tracking for Intuitive UAV Control",
     venue:"Southern Regional Honors Council Conference · March 2025",
-    meta:"Chattanooga, TN",doi:"",pdf:"",
+    meta:"Presenter · Chattanooga, TN",doi:"",pdf:"",
   },
   {
     title:"Analyzing the Performance of 3D LiDAR and Camera-based Object Detection Systems and their Fusion using AI for Autonomous Systems",
@@ -671,13 +704,4 @@ PUBLICATIONS.forEach(p=>{
   ].join('');
   const c=document.createElement('div'); c.className='pub-card';
   c.innerHTML=`<div class="pub-venue">${p.venue}</div><div class="pub-title">${p.title}</div><div class="pub-meta">${p.meta}</div>${links?`<div class="pub-links">${links}</div>`:''}`;
-  document.getElementById('pub-list').appendChild(c);
-});
-
-const obs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } });
-},{threshold:0.07});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-</script>
-</body>
-</html>
+  document.getElementById(
