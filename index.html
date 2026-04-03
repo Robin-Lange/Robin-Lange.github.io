@@ -373,7 +373,7 @@
         <a class="btn btn-primary" href="#projects">View Projects</a>
         <a class="btn btn-outline" href="https://www.linkedin.com/in/robinlange-gsu/" target="_blank">LinkedIn</a>
         <a class="btn btn-outline" href="Resume_Lange.pdf" target="_blank">Resume</a>
-        <a class="btn btn-outline" href="/cdn-cgi/l/email-protection#abd9c4c9c2c585c7cac5ccce85cec5ccebdbd9c4dfc4c585c6ce">Email</a>
+        <a class="btn btn-outline" href="mailto:robin.lange.eng@proton.me">Email</a>
       </div>
     </div>
     <div class="hero-photo">
@@ -428,7 +428,7 @@
         <p>Open to research collaboration, internship opportunities, and technical questions.</p>
       </div>
       <div class="contact-links">
-        <a class="btn btn-primary" href="/cdn-cgi/l/email-protection#c8baa7aaa1a6e6a4a9a6afade6ada6af88b8baa7bca7a6e6a5ad"><span class="__cf_email__" data-cfemail="fe8c919c9790d0929f90999bd09b9099be8e8c918a9190d0939b">[email&#160;protected]</span></a>
+        <a class="btn btn-primary" href="mailto:robin.lange.eng@proton.me">robin.lange.eng@proton.me</a>
         <a class="btn btn-outline" href="https://www.linkedin.com/in/robinlange-gsu/" target="_blank">LinkedIn</a>
         <a class="btn btn-outline" href="Resume_Lange.pdf" target="_blank">Resume</a>
       </div>
@@ -442,7 +442,7 @@
   <p>GitHub Pages</p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 const SKILLS = [
   "Python","PyTorch","ONNX",
   "Deep Learning (LSTM · YOLO)","Computer Vision",
@@ -704,4 +704,16 @@ PUBLICATIONS.forEach(p=>{
   ].join('');
   const c=document.createElement('div'); c.className='pub-card';
   c.innerHTML=`<div class="pub-venue">${p.venue}</div><div class="pub-title">${p.title}</div><div class="pub-meta">${p.meta}</div>${links?`<div class="pub-links">${links}</div>`:''}`;
-  document.getElementById(
+  document.getElementById('pub-list').appendChild(c);
+});
+
+/* ── SCROLL REVEAL ── */
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
