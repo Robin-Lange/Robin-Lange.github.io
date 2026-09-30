@@ -1,0 +1,26 @@
+% Adapted from Jake Gutierrez's Resume; based on sb2nov/resume.
+% User-supplied template source retains its MIT license notice; see ATTRIBUTION.md.
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[left=0.62in,right=0.62in,top=0.5in,bottom=0.5in]{geometry}
+\usepackage{titlesec,enumitem,tabularx,fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\input{glyphtounicode}
+\pdfgentounicode=1
+\urlstyle{same}
+\raggedright
+\raggedbottom
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\setlength{\emergencystretch}{2em}
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+\setlist[itemize]{leftmargin=13pt,itemsep=2pt,topsep=3pt,parsep=0pt}
+\newcommand{\resumeSubheading}[4]{\textbf{#1}\hfill\textbf{\small #2}\\{\small\textit{#3}\hfill\textit{#4}}\par}
+\newcommand{\resumeItem}[1]{\item #1}
+\newcommand{\pub}[1]{\par\hangindent=10pt\hangafter=1 #1\par\vspace{2pt}}
+\pagestyle{empty}
+
+\newcommand{\institute}[3]{\textbf{#1}\hfill{\small\textbf{#2}}\par{\small #3}\par}
+\newcommand{\position}[2]{{\small\textit{#1}\hfill\textit{#2}}\par}

@@ -615,6 +615,30 @@ h2 {
   color: var(--ink);
 }
 
+.document-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.document-list a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  text-decoration: none;
+}
+
+.document-list a:hover {
+  border-color: var(--blue);
+}
+
+.document-list span {
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+}
+
 .contact {
   margin-bottom: 2rem;
   padding: clamp(3rem, 8vw, 7rem);
@@ -723,6 +747,10 @@ footer p {
 
   .compact-projects {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .document-list {
+    grid-template-columns: 1fr;
   }
 
   .timeline article {
