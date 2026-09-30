@@ -1,0 +1,5 @@
+# LaTeX build artifacts; published PDFs live at the repository root.
+documents/*.aux
+documents/*.log
+documents/*.out
+documents/*.pdf
