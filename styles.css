@@ -164,6 +164,18 @@ h4 { font-size: 1.12rem; font-weight: 650; }
 .project-note { margin-top: 1rem; }
 .text-link { display: inline-block; margin-top: 1.25rem; color: var(--blue); font-size: .89rem; font-weight: 650; text-underline-offset: .2em; }
 .project-current .text-link { color: #c8e0ff; }
+.project-media { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.2); }
+.media-item { min-width: 0; margin: 0; }
+.video-frame { position: relative; overflow: hidden; width: 100%; aspect-ratio: 16 / 9; border-radius: 12px; background: #07182f; }
+.video-frame iframe { position: absolute; inset: 0; display: block; width: 100%; height: 100%; border: 0; }
+.video-frame-portrait { aspect-ratio: 9 / 16; }
+.media-item figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .4rem 1rem; margin-top: .75rem; color: var(--muted); font-size: .78rem; }
+.media-item figcaption a { font-weight: 650; text-underline-offset: .2em; }
+.project-current .media-item figcaption { color: #b5c9e4; }
+.project-current .media-item figcaption a { color: #c8e0ff; }
+.award-media { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 300px); align-items: center; gap: clamp(2rem, 5vw, 5rem); margin-top: 2.5rem; padding: clamp(1.5rem, 3vw, 3rem); border: 1px solid var(--line); border-radius: 22px; background: var(--soft); scroll-margin-top: 2rem; }
+.award-media-description { max-width: 620px; margin-top: 1rem; color: var(--muted); }
+.media-short { width: 100%; max-width: 300px; justify-self: center; }
 .stack { margin-top: 1.2rem; color: var(--muted); font-size: .82rem; font-weight: 600; }
 .metrics { display: flex; gap: 2rem; margin: 1.3rem 0 0; }
 .metrics div { display: flex; flex-direction: column-reverse; }
@@ -238,6 +250,8 @@ footer { width: min(calc(100% - 4rem), var(--measure)); min-height: 94px; margin
   .section { padding: 5rem 0; }
   .section-tinted { width: min(calc(100% - 1rem), 1440px); padding: 4rem 1.1rem; }
   .featured-work, .project-current .project-body, .compact-projects, .capability-grid, .document-list { grid-template-columns: 1fr; }
+  .project-media, .award-media { grid-template-columns: 1fr; }
+  .project-media { gap: 1.75rem; }
   .project-current { grid-column: auto; }
   .project-meta { margin-bottom: 2rem; }
   .timeline article { grid-template-columns: 1fr; gap: .5rem; }
