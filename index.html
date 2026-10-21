@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Robin Lange is a Mechanical Engineering Honors student researching distributed autonomy and multi-robot coordination, with interests in transferable planning and control under uncertain or delayed information.">
+  <meta name="description" content="Robin Lange is a Mechanical Engineering Honors student researching robotic autonomy, multi-robot coordination, perception, and learning-based planning and control.">
   <meta name="theme-color" content="#071a35">
   <meta property="og:title" content="Robin Lange — Robotics & Autonomy">
-  <meta property="og:description" content="Distributed autonomy, multi-robot coordination, and transferable planning and control grounded in simulation and real robot testing.">
+  <meta property="og:description" content="Robotic autonomy, multi-robot coordination, perception, and learning-based planning and control, grounded in simulation and robot experiments.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://robin-lange.github.io/">
   <title>Robin Lange — Robotics & Autonomy</title>
-  <link rel="stylesheet" href="styles.css?v=20261007-projects">
+  <link rel="stylesheet" href="styles.css?v=20261021-research">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -34,10 +34,10 @@
         <p class="eyebrow">Robin Lange / Robotics & autonomy</p>
         <h1>Autonomy that meets the physical world.</h1>
         <p class="hero-intro">
-          I’m Robin Lange, a Mechanical Engineering Honors student with research experience
-          in distributed autonomy, multi-robot coordination, and experimental validation
-          of autonomous systems. I’m interested in developing planning and control methods
-          that transfer across heterogeneous robots, particularly under uncertain or delayed information.
+          I’m Robin Lange, a Mechanical Engineering Honors student from Germany working
+          on autonomous robotic systems. My research spans multi-robot coordination,
+          perception, planning, and data-driven modeling. I’m interested in combining
+          learning-based methods with planning and control, then evaluating them on physical systems.
         </p>
         <p class="hero-now">
           After a summer with <strong>IHMC’s National Center for Collaborative Autonomy</strong>,
@@ -122,6 +122,12 @@
               </a>
             </div>
           </div>
+          <figure class="research-photo research-photo-wide">
+              <a href="assets/research/ihmc-robot-team.jpg" target="_blank" rel="noopener" aria-label="Open image: Two Spot robots and a Husky in the IHMC demonstration area">
+                <img src="assets/research/ihmc-robot-team.jpg" width="1378" height="752" alt="Two Spot robots and a Husky in the IHMC demonstration area" loading="lazy" decoding="async">
+              </a>
+              <figcaption>IHMC collection-and-delivery setup with two Spot robots and the manually operated Husky.</figcaption>
+            </figure>
           <div class="project-media" aria-label="IHMC demonstration videos">
             <figure class="media-item">
               <div class="video-frame">
@@ -177,6 +183,12 @@
               </dl>
               <p class="stack">ROS 2 · cuVSLAM · RealSense · NVIDIA Jetson · Behavior Trees</p>
               <a class="text-link" href="#cur-video">Watch the CUR research video <span aria-hidden="true">↓</span></a>
+              <figure class="research-photo ">
+              <a href="assets/research/uav-jetson-realsense.jpg" target="_blank" rel="noopener" aria-label="Open image: UAV platform with onboard compute and a RealSense camera">
+                <img src="assets/research/uav-jetson-realsense.jpg" width="865" height="482" alt="UAV platform with onboard compute and a RealSense camera" loading="lazy" decoding="async">
+              </a>
+              <figcaption>Jetson/RealSense UAV research platform; localization was evaluated in a ground-based cart trial.</figcaption>
+            </figure>
             </div>
           </div>
         </article>
@@ -193,9 +205,11 @@
             </div>
             <div>
               <p class="project-summary">
-                Investigating when learned predictions can improve safety-supervised
-                predictive control. Established a MATLAB/AVL PD commissioning baseline;
-                matched comparisons of physical and learned preview are planned.
+                Trained a GRU lead-motion predictor with 27.5% lower held-out forecast
+                RMSE than physics-based extrapolation. Integrated causal reliability gating
+                with safety-supervised MPC in MATLAB/AVL and investigated switching-induced
+                control transients. The ongoing thesis evaluates prediction and control
+                through matched simulation runs.
               </p>
               <a class="text-link" href="#publications">
                 Thesis and publications <span aria-hidden="true">↗</span>
@@ -216,10 +230,11 @@
             </div>
             <div>
               <p class="project-summary">
-                At CARISSMA C-ISAFE, investigated how a soft truck-rear target appeared
-                to radar, LiDAR and camera sensors. Qualitative LiDAR and 4D-radar
-                analysis informed refinements to its tarpaulin covering and geometry. I built
-                the quick-assembly and fold-away mechanisms from an earlier concept.
+                Designed and fabricated a fold-away truck-rear soft target for drive-over
+                pre-crash tests. Investigated weak radar returns and refined the covering,
+                tension straps, foam elements and concealed fasteners using LiDAR and
+                4D-radar observations. The target used a magnetically retained,
+                weight-stabilized upper section and two-person assembly.
               </p>
               <p class="stack">Mechanical prototyping · LiDAR · 4D radar · Physical testing</p>
             </div>
@@ -248,7 +263,7 @@
           <article>
             <span>LiDAR perception</span>
             <h4>Rule-based lane keeping</h4>
-            <p>Contributed to an interpretable LiDAR module for oncoming-vehicle lane behavior, published as SAE 2025-01-8025.</p>
+            <p>Coauthored SAE 2025-01-8025 on rule-based oncoming-vehicle tracking and lane-keeping assistance, evaluated on nine real driving scenarios.</p>
           </article>
           <article>
             <span>Human-robot interaction</span>
@@ -260,6 +275,29 @@
             <span>Mechanical engineering</span>
             <h4>Robotic arm CAD</h4>
             <p>Created a multi-DOF SolidWorks assembly with detailed drawings, gear-mate constraints, and motion simulation.</p>
+          </article>
+
+          <article>
+            <span>Learning-based perception</span>
+            <h4>Truck-rear detection</h4>
+            <p>Fine-tuned YOLO for truck-rear detection as related perception work alongside sensor-based target testing.</p>
+            <figure class="research-photo ">
+              <a href="assets/research/truck-rear-yolo.jpg" target="_blank" rel="noopener" aria-label="Open image: YOLO truck-rear detection in an indoor vehicle test hall">
+                <img src="assets/research/truck-rear-yolo.jpg" width="959" height="568" alt="YOLO truck-rear detection in an indoor vehicle test hall" loading="lazy" decoding="async">
+              </a>
+              <figcaption>Example truck-rear detection from the fine-tuned YOLO model.</figcaption>
+            </figure>
+          </article>
+          <article>
+            <span>Ground robotics</span>
+            <h4>ROS 2 navigation and integration</h4>
+            <p>Collaborative ROS 2 development and testing on Eagle Bot, plus TurtleBot4/Ouster integration for LiDAR SLAM and Nav2.</p>
+            <figure class="research-photo ">
+              <a href="assets/research/ground-robot-testing.jpg" target="_blank" rel="noopener" aria-label="Open image: Green mobile robot with sensors and onboard compute among test obstacles">
+                <img src="assets/research/ground-robot-testing.jpg" width="1525" height="999" alt="Green mobile robot with sensors and onboard compute among test obstacles" loading="lazy" decoding="async">
+              </a>
+              <figcaption>Ground-robot integration and testing.</figcaption>
+            </figure>
           </article>
         </div>
       </div>
@@ -287,7 +325,7 @@
           <div>
             <h3>Undergraduate Student Researcher</h3>
             <p class="timeline-org">Intelligent Vehicles Navigation Research Laboratory · Georgia Southern University</p>
-            <p>Developed a LiDAR hand-motion interface and UAV visual SLAM/navigation prototypes; coauthored two published SAE papers. Established a MATLAB/AVL PD commissioning baseline for the ongoing honors thesis; matched reliability-gated preview comparisons are planned.</p>
+            <p>Trained a GRU lead-motion predictor and integrated reliability-gated preview with safety-supervised MPC for the ongoing honors thesis. Built a ROS 2 UAV visual-SLAM/navigation pipeline and a LiDAR hand-motion interface; coauthored two published SAE papers.</p>
           </div>
         </article>
         <article>
@@ -295,7 +333,7 @@
           <div>
             <h3>Vehicle Testing Research Intern</h3>
             <p class="timeline-org">CARISSMA Institute of Safety in Future Mobility (C-ISAFE)</p>
-            <p>Investigated radar, LiDAR and camera responses to a soft truck target. Sensor observations informed covering and geometry refinements; I also built quick-assembly and fold-away mechanisms.</p>
+            <p>Designed and fabricated a fold-away truck-rear soft target for drive-over pre-crash tests. Investigated weak radar returns and tested covering, reflector and fastener arrangements using LiDAR and 4D radar to refine sensor response and repeatability.</p>
           </div>
         </article>
         <article>
@@ -303,7 +341,7 @@
           <div>
             <h3>Autonomous Systems & AI Intern</h3>
             <p class="timeline-org">Fraunhofer Institute for Transportation and Infrastructure Systems IVI</p>
-            <p>Developed Mission AI decision and execution logic in Python and ROS 2; compared behavior trees and state machines, evaluated resource use and tested emergency interruption in simulation.</p>
+            <p>Developed a hybrid Python/ROS 2 mission executive combining guarded state transitions with reactive behavior-tree actions. Verified defined transitions and emergency preemption in Fraunhofer’s flight simulator, and benchmarked execution time and code size against pure state-machine and behavior-tree designs.</p>
           </div>
         </article>
         <article class="timeline-compact">
@@ -336,6 +374,7 @@
             <p class="role-label">Co-author · SAE Technical Paper</p>
             <h3>Data-Driven Calibration of Vehicle Simulations for Accurate Control Response in Development and Testing</h3>
             <p>Valentin Soloiu, Timothy Sutton, Shaen Mehrzed, Robin Lange, Charles Zimmerman and Guillermo Peralta Lopez · SAE 2026-01-0058</p>
+            <p>LSTM actuator modeling from wheel-encoder data; the study reports 36.3% lower wheel-velocity RMSE.</p>
           </div>
           <a href="https://doi.org/10.4271/2026-01-0058" target="_blank" rel="noopener" aria-label="Open Data-Driven Calibration paper">DOI ↗</a>
         </article>
@@ -360,15 +399,15 @@
           <div class="publication-year">In progress</div>
           <div>
             <p class="role-label">Honors thesis · In progress</p>
-            <h3>When to Trust Learned Lead-Vehicle Predictions: Reliability-Gated Preview for Safety-Supervised Adaptive Cruise Control</h3>
-            <p>MATLAB/AVL PD commissioning baseline established; physical and learned-preview comparisons are planned.</p>
+            <h3>Reliability-Gated Lead-Vehicle Prediction for Safety-Supervised Adaptive Cruise Control</h3>
+            <p>GRU forecasting, causal reliability gating and safety-supervised MPC in MATLAB/AVL; ongoing matched simulation studies.</p>
           </div>
         </article>
         <article>
           <div class="publication-year">2026</div>
           <div>
             <p class="role-label">Presenter</p>
-            <h3>Intelligent Indoor UAV Navigation with V-SLAM and Behavior Trees for Industry 5.0 Applications</h3>
+            <h3>Intelligent UAV Navigation with V-SLAM and Behavior Trees for Industry 5.0 Applications</h3>
             <p>Southern Regional Honors Council Conference · Montgomery, AL</p>
           </div>
         </article>
@@ -380,6 +419,14 @@
             <p>Valentin Soloiu, Shaen Mehrzed, Luke Kroeger, Kody Pierce, Timothy Sutton and Robin Lange · SAE 2025-01-8025</p>
           </div>
           <a href="https://doi.org/10.4271/2025-01-8025" target="_blank" rel="noopener" aria-label="Open Rule-Based Lidar Lane-Keeping paper">DOI ↗</a>
+        </article>
+        <article>
+          <div class="publication-year">2025</div>
+          <div>
+            <p class="role-label">Presenter · SRHC conference</p>
+            <h3>3D-Space Hand Trajectory Tracking for Intuitive UAV Control</h3>
+            <p>Southern Regional Honors Council Conference · Chattanooga, TN</p>
+          </div>
         </article>
         <article>
           <div class="publication-year">2025</div>
@@ -488,6 +535,12 @@
                 </div>
                 <figcaption><span>Hand-trajectory UAV control · 2025</span><a href="https://drive.google.com/file/d/1HU6loC6S8mD5EIRryEh656phVEESvn3i/view" target="_blank" rel="noopener">Open video ↗</a></figcaption>
               </figure>
+              <figure class="research-photo ">
+              <a href="assets/research/lidar-hand-tracking.jpg" target="_blank" rel="noopener" aria-label="Open image: LiDAR point cloud with the tracked hand highlighted inside a region of interest">
+                <img src="assets/research/lidar-hand-tracking.jpg" width="1920" height="926" alt="LiDAR point cloud with the tracked hand highlighted inside a region of interest" loading="lazy" decoding="async">
+              </a>
+              <figcaption>MATLAB LiDAR hand tracking used to generate velocity commands for the Tello UAV.</figcaption>
+            </figure>
             </div>
           </div>
         </div>
@@ -534,11 +587,11 @@
         </div>
         <div>
           <h3>Perception</h3>
-          <p>Visual SLAM, LiDAR, 4D radar, RGB-D sensing, motion capture, computer vision</p>
+          <p>Isaac ROS cuVSLAM, LiDAR/RGB-D perception, sensor fusion, custom YOLO training and evaluation, 4D radar, motion capture</p>
         </div>
         <div>
           <h3>Control & simulation</h3>
-          <p>PD control, MPC (ongoing thesis), MATLAB/AVL, Gazebo, hybrid digital twins, PyTorch, ONNX, MCAP/Foxglove</p>
+          <p>PID control, safety-supervised MPC, reliability-gated preview, GRU forecasting, MATLAB/AVL, Gazebo, hybrid digital twins, PyTorch, ONNX, MCAP/Foxglove</p>
         </div>
         <div>
           <h3>Hardware & engineering</h3>
@@ -579,9 +632,10 @@
 
     <section class="section" id="documents" aria-labelledby="documents-title">
       <p class="eyebrow">Downloads</p>
-      <h2 id="documents-title">Résumé</h2>
+      <h2 id="documents-title">Résumé & research background</h2>
       <div class="document-list">
-        <a href="Robin_Lange_Resume_Final.pdf?v=20261019" target="_blank" rel="noopener"><strong>Research résumé</strong><span>Two pages · Distributed autonomy, planning and control interests, research and publications · PDF ↗</span></a>
+        <a href="Robin_Lange_Resume.pdf?v=20261021" target="_blank" rel="noopener"><strong>Research résumé</strong><span>Two pages · Robotics research, experience, publications and skills · PDF ↗</span></a>
+        <a href="Robin_Lange_Research_Experience.pdf" target="_blank" rel="noopener"><strong>Research background</strong><span>Three slides · Robot platforms, perception, experiments and current research · PDF ↗</span></a>
       </div>
     </section>
 
@@ -590,8 +644,8 @@
       <h2>Let’s build robots that work in the real world.</h2>
       <p>
         I’m seeking graduate research beginning in Fall 2027, with interests in
-        transferable planning and control for heterogeneous robots, distributed autonomy,
-        and decision-making under uncertain or delayed information.
+        learning-based robotic autonomy, multi-robot coordination, and the connection
+        between perception, planning, control, and hardware.
       </p>
       <div class="contact-links">
         <a class="button button-light" href="mailto:robin.lange.eng@proton.me">robin.lange.eng@proton.me</a>

@@ -321,3 +321,12 @@ footer { width: min(calc(100% - 4rem), var(--measure)); min-height: 94px; margin
   .academic-recognition { gap: 1.5rem; }
   .academic-recognition > .gallery-card { max-width: 320px; }
 }
+
+/* Photographs and experiment views from the research background presentation. */
+.research-photo { min-width: 0; margin: 1.5rem 0 0; }
+.research-photo a { display: block; border-radius: 12px; overflow: hidden; background: #e9eef4; }
+.research-photo img { display: block; width: 100%; height: auto; object-fit: contain; }
+.research-photo figcaption { margin-top: .65rem; color: var(--muted); font-size: .78rem; line-height: 1.5; }
+.project-current .research-photo figcaption { color: #b5c9e4; }
+.research-photo-wide { max-width: 760px; margin: 2rem auto 0; }
+.compact-projects .research-photo { margin-top: 1rem; }
