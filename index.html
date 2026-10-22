@@ -210,7 +210,15 @@
 <h3>Truck-underride detection and test targets</h3>
 </div>
 <div>
-<p class="project-summary">Developed a collapsible truck-rear soft target and a sensor-data evaluation workflow for difficult-to-detect pre-crash and truck-underride scenarios. Collected and analyzed camera, LiDAR, and 4D-radar data to characterize detectability, identify weak radar returns and unwanted reflections, and guide target-design changes.</p><p class="project-note">Compared real-truck and surrogate-target signatures using recorded measurements and MAN TruckScenes reference 4D-radar and 3D-LiDAR data. The draft manuscript investigates how trailer-underbody multipath contributes to strong radar returns and why a compact target cannot reproduce the full-length trailer signature. Camera work used BDD100K-derived rear-truck images, the Vehicle Orientation Dataset, and custom soft-target imagery: fine-tuned YOLO26l for truck-rear detection and compared YOLOv5 and visual-prompt YOLOe approaches using IoU, precision, recall, and F1.</p>
+<p class="project-summary">Developed a collapsible truck-rear soft target for repeatable pre-crash and truck-underride testing. Collected and analyzed camera, 3D LiDAR, and 4D-radar data to characterize detectability and guide target-design changes.</p>
+<p class="project-note">Compared real-truck and surrogate-target signatures using recorded measurements and MAN TruckScenes reference radar and LiDAR data. The draft manuscript investigates strong trailer-underbody multipath returns and the limitations of reproducing a full-length trailer signature with a compact target.</p>
+<p class="project-note">Fine-tuned YOLO26l on filtered BDD100K rear-truck images and used the Vehicle Orientation Dataset for orientation-aware detection. Evaluated truck-rear and underride-guard detection on custom soft-target imagery, comparing YOLOv5 and visual-prompt YOLOe approaches using IoU, precision, recall, and F1.</p>
+<figure class="research-photo">
+<a aria-label="Open image: YOLO truck-rear detection in an indoor vehicle test hall" href="assets/research/truck-rear-yolo.jpg" rel="noopener" target="_blank">
+<img alt="YOLO truck-rear detection in an indoor vehicle test hall" decoding="async" height="568" loading="lazy" src="assets/research/truck-rear-yolo.jpg" width="959"/>
+</a>
+<figcaption>Example truck-rear detection from the fine-tuned YOLO26l model.</figcaption>
+</figure>
 <p class="stack">Pre-crash perception · YOLO26l / YOLOe · Camera / LiDAR / 4D radar · Experimental validation</p>
 </div>
 </div>
@@ -270,21 +278,11 @@
             <p>Created a multi-DOF SolidWorks assembly with detailed drawings, gear-mate constraints, and motion simulation.</p>
           </article>
 
-          <article>
-<span>Learning-based perception</span>
-<h4>Truck-rear detection</h4>
-<p>Fine-tuned YOLO26l on filtered BDD100K rear-truck images. Used the Vehicle Orientation Dataset for orientation-aware detection and custom soft-target imagery for truck-rear and underride-guard evaluation, comparing supervised and visual-prompt methods.</p>
-<figure class="research-photo">
-<a aria-label="Open image: YOLO truck-rear detection in an indoor vehicle test hall" href="assets/research/truck-rear-yolo.jpg" rel="noopener" target="_blank">
-<img alt="YOLO truck-rear detection in an indoor vehicle test hall" decoding="async" height="568" loading="lazy" src="assets/research/truck-rear-yolo.jpg" width="959"/>
-</a>
-<figcaption>Example truck-rear detection from the fine-tuned YOLO model.</figcaption>
-</figure>
-</article>
+          
           <article>
 <span>Ground robotics</span>
 <h4>ROS 2 navigation and integration</h4>
-<p>Collaborative ROS 2 development on Eagle Bot, plus a custom iRobot Create 3 platform integrating Jetson compute, Ouster OS0 LiDAR, SLAM Toolbox, AMCL, and Nav2. Work included ROS-domain bridging, point-cloud filtering, 3D obstacle representation, and bumper observations for the LiDAR blind spot.</p>
+<p>Collaborative ROS 2 development on Eagle Bot and TurtleBot 4 Lite, integrating Jetson compute and an Ouster OS0 3D LiDAR sensor with SLAM Toolbox, AMCL, and Nav2. Work included ROS-domain bridging, point-cloud filtering, 3D obstacle representation, and bumper observations for the LiDAR blind spot.</p>
 <figure class="research-photo">
 <a aria-label="Open image: Green mobile robot with sensors and onboard compute among test obstacles" href="assets/research/ground-robot-testing.jpg" rel="noopener" target="_blank">
 <img alt="Green mobile robot with sensors and onboard compute among test obstacles" decoding="async" height="999" loading="lazy" src="assets/research/ground-robot-testing.jpg" width="1525"/>
@@ -588,7 +586,7 @@
         </div>
         <div>
           <h3>Hardware & engineering</h3>
-          <p>Spot, Husky, TurtleBot, NVIDIA Jetson, RealSense/Ouster, OptiTrack/Motive, motor/encoder integration, SolidWorks, ANSYS, LabVIEW, Rust, Python, C++</p>
+          <p>Spot, Husky, TurtleBot 4 Lite, NVIDIA Jetson, RealSense cameras, Ouster 3D LiDAR, OptiTrack/Motive, motor/encoder integration, SolidWorks, ANSYS, LabVIEW, Rust, Python, C++</p>
         </div>
       </div>
     </section>
