@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://robin-lange.github.io/">
   <title>Robin Lange — Robotics & Autonomy</title>
-  <link rel="stylesheet" href="styles.css?v=20261022-research-evidence">
+  <link rel="stylesheet" href="styles.css?v=20261022-research-galleries">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -168,7 +168,7 @@
               </dl>
               <p class="stack">ROS 2 · cuVSLAM · RealSense · NVIDIA Jetson · Behavior Trees</p>
               <a class="text-link" href="#cur-video">Watch the CUR research video <span aria-hidden="true">↓</span></a>
-              <figure class="research-photo ">
+              <div class="research-image-pair"><figure class="research-photo ">
               <a href="assets/research/uav-jetson-realsense.jpg" target="_blank" rel="noopener" aria-label="Open image: UAV platform with onboard compute and a RealSense camera">
                 <img src="assets/research/uav-jetson-realsense.jpg" width="865" height="482" alt="UAV platform with onboard compute and a RealSense camera" loading="lazy" decoding="async">
               </a>
@@ -177,7 +177,7 @@
 <figure class="research-photo ">
 <a href="assets/research/uav-visual-slam-map.jpg" target="_blank" rel="noopener" aria-label="Open image: ROS 2 visual SLAM view with camera, depth and mapped surroundings">
 <img src="assets/research/uav-visual-slam-map.jpg" width="659" height="394" alt="ROS 2 visual SLAM view with camera, depth and mapped surroundings" loading="lazy" decoding="async">
-</a><figcaption>Visual-SLAM and mapping view from the Jetson/RealSense UAV project; localization was evaluated in a ground-based cart trial.</figcaption></figure>
+</a><figcaption>Visual-SLAM and mapping view from the Jetson/RealSense UAV project; localization was evaluated in a ground-based cart trial.</figcaption></figure></div>
             </div>
           </div>
         </article>
@@ -221,7 +221,7 @@
 <p class="project-summary">Developed a collapsible truck-rear soft target for repeatable pre-crash and truck-underride testing. Collected and analyzed camera, 3D LiDAR, and 4D-radar data to characterize detectability and guide target-design changes.</p>
 <p class="project-note">Compared real-truck and surrogate-target signatures using recorded measurements and MAN TruckScenes reference radar and LiDAR data. The draft manuscript investigates strong trailer-underbody multipath returns and the limitations of reproducing a full-length trailer signature with a compact target.</p>
 <p class="project-note">Fine-tuned YOLO26l on filtered BDD100K rear-truck images and used the Vehicle Orientation Dataset for orientation-aware detection. Evaluated truck-rear and underride-guard detection on custom soft-target imagery, comparing YOLOv5 and visual-prompt YOLOe approaches using IoU, precision, recall, and F1.</p>
-<figure class="research-photo">
+<div class="research-image-pair"><figure class="research-photo">
 <a aria-label="Open image: YOLO truck-rear detection in an indoor vehicle test hall" href="assets/research/truck-rear-yolo.jpg" rel="noopener" target="_blank">
 <img alt="YOLO truck-rear detection in an indoor vehicle test hall" decoding="async" height="568" loading="lazy" src="assets/research/truck-rear-yolo.jpg" width="959"/>
 </a>
@@ -230,7 +230,7 @@
 <figure class="research-photo research-sensor-view">
 <a href="assets/research/truck-lidar-radar-comparison.jpg" target="_blank" rel="noopener" aria-label="Open image: Camera view and 3D LiDAR and 4D radar views of a truck">
 <img src="assets/research/truck-lidar-radar-comparison.jpg" width="1832" height="1863" alt="Camera view and 3D LiDAR and 4D radar views of a truck" loading="lazy" decoding="async">
-</a><figcaption>Camera, LiDAR, and radar views used to inspect truck sensor signatures. The plots illustrate the comparison; they are not a separate detection-performance benchmark.</figcaption></figure>
+</a><figcaption>Camera, LiDAR, and radar views used to inspect truck sensor signatures. The plots illustrate the comparison; they are not a separate detection-performance benchmark.</figcaption></figure></div>
 <p class="stack">Pre-crash perception · YOLO26l / YOLOe · Camera / LiDAR / 4D radar · Experimental validation</p>
 </div>
 </div>

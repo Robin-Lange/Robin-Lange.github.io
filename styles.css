@@ -346,3 +346,9 @@ footer { width: min(calc(100% - 4rem), var(--measure)); min-height: 94px; margin
 .research-diagram img { max-height: 430px; }
 .research-sensor-view img { max-height: 560px; }
 .earlier-research-intro { max-width: 900px; margin: 1rem 0 1.5rem; color: var(--muted); }
+
+.research-image-pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1rem; align-items: start; margin-top: 1.5rem; }
+.research-image-pair .research-photo { margin-top: 0; }
+.research-image-pair .research-photo a { display: flex; align-items: center; justify-content: center; height: 200px; }
+.research-image-pair .research-photo img { width: 100%; height: 100%; object-fit: contain; }
+@media (max-width: 640px) { .research-image-pair { grid-template-columns: 1fr; } .research-image-pair .research-photo a { height: auto; } .research-image-pair .research-photo img { height: auto; max-height: 420px; } }
