@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://robin-lange.github.io/">
   <title>Robin Lange — Robotics & Autonomy</title>
-  <link rel="stylesheet" href="styles.css?v=20261022-education">
+  <link rel="stylesheet" href="styles.css?v=20261022-research-evidence">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -119,6 +119,10 @@
 </a>
 <figcaption>IHMC collection-and-delivery setup with two Spot robots and the manually operated Husky.</figcaption>
 </figure>
+<figure class="research-photo research-diagram">
+<a href="assets/research/ihmc-joint-activity-graph.jpg" target="_blank" rel="noopener" aria-label="Open image: Joint Activity Graph for robot object approach and pickup">
+<img src="assets/research/ihmc-joint-activity-graph.jpg" width="563" height="599" alt="Joint Activity Graph for robot object approach and pickup" loading="lazy" decoding="async">
+</a><figcaption>Joint Activity Graph used to structure the object-approach and pickup activity.</figcaption></figure>
 <div aria-label="IHMC demonstration videos" class="project-media">
 <figure class="media-item">
 <div class="video-frame">
@@ -170,6 +174,10 @@
               </a>
               <figcaption>Jetson/RealSense UAV research platform; localization was evaluated in a ground-based cart trial.</figcaption>
             </figure>
+<figure class="research-photo ">
+<a href="assets/research/uav-visual-slam-map.jpg" target="_blank" rel="noopener" aria-label="Open image: ROS 2 visual SLAM view with camera, depth and mapped surroundings">
+<img src="assets/research/uav-visual-slam-map.jpg" width="659" height="394" alt="ROS 2 visual SLAM view with camera, depth and mapped surroundings" loading="lazy" decoding="async">
+</a><figcaption>Visual-SLAM and mapping view from the Jetson/RealSense UAV project; localization was evaluated in a ground-based cart trial.</figcaption></figure>
             </div>
           </div>
         </article>
@@ -219,6 +227,10 @@
 </a>
 <figcaption>Example truck-rear detection from the fine-tuned YOLO26l model.</figcaption>
 </figure>
+<figure class="research-photo research-sensor-view">
+<a href="assets/research/truck-lidar-radar-comparison.jpg" target="_blank" rel="noopener" aria-label="Open image: Camera view and 3D LiDAR and 4D radar views of a truck">
+<img src="assets/research/truck-lidar-radar-comparison.jpg" width="1832" height="1863" alt="Camera view and 3D LiDAR and 4D radar views of a truck" loading="lazy" decoding="async">
+</a><figcaption>Camera, LiDAR, and radar views used to inspect truck sensor signatures. The plots illustrate the comparison; they are not a separate detection-performance benchmark.</figcaption></figure>
 <p class="stack">Pre-crash perception · YOLO26l / YOLOe · Camera / LiDAR / 4D radar · Experimental validation</p>
 </div>
 </div>
@@ -493,7 +505,7 @@
         <header class="research-case-heading">
           <p class="eyebrow">Human–robot interaction · 2025</p>
           <h3 id="drone-research-title">Guiding a drone through hand movement</h3>
-          <p>LiDAR-tracked hand movement as an interface for drone control.</p>
+          <p>Tracked hand motion in MATLAB using Ouster 3D LiDAR point clouds and converted it into velocity commands for a Tello UAV, demonstrating hand-controlled flight.</p>
         </header>
         <div class="research-case-grid">
         <article class="gallery-card">
@@ -532,6 +544,10 @@
               </a>
               <figcaption>MATLAB LiDAR hand tracking used to generate velocity commands for the Tello UAV.</figcaption>
             </figure>
+<figure class="research-photo ">
+<a href="assets/research/lidar-hand-control-commands.jpg" target="_blank" rel="noopener" aria-label="Open image: Plot of generated hand-control velocity commands in three axes">
+<img src="assets/research/lidar-hand-control-commands.jpg" width="950" height="353" alt="Plot of generated hand-control velocity commands in three axes" loading="lazy" decoding="async">
+</a><figcaption>Example velocity-command traces from the LiDAR hand-control interface; these are command outputs, not measured UAV tracking accuracy.</figcaption></figure>
             </div>
           </div>
         </div>
@@ -539,6 +555,7 @@
 
       <div class="earlier-research">
         <h3>Collaborative sensor-fusion research · 2024</h3>
+        <p class="earlier-research-intro">Earlier collaborative studies examined LiDAR/camera object detection with joint probabilistic data association (JPDA) tracking and LSTM-based fusion of LiDAR and ultrasonic range measurements.</p>
         <div class="poster-gallery">
         <article class="gallery-card">
           <a class="gallery-image" href="assets/posters/lidar-camera-fusion-2024.jpg" target="_blank" rel="noopener" aria-label="Open the 2024 LiDAR-camera object detection research poster at full size">

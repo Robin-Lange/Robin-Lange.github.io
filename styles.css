@@ -339,3 +339,10 @@ footer { width: min(calc(100% - 4rem), var(--measure)); min-height: 94px; margin
 .academy-list { padding-left: 1.15rem; }
 .academy-list li + li { margin-top: .8rem; }
 @media (max-width: 900px) { .education-background { grid-template-columns: 1fr; gap: 1.7rem; } }
+
+/* Original research diagrams and experiment views from the three-slide summary. */
+.research-diagram { max-width: 460px; margin: 2rem auto 0; }
+.research-diagram a { background: white; }
+.research-diagram img { max-height: 430px; }
+.research-sensor-view img { max-height: 560px; }
+.earlier-research-intro { max-width: 900px; margin: 1rem 0 1.5rem; color: var(--muted); }
